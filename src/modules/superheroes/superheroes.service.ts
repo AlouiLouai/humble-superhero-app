@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Superhero } from 'src/interfaces/Superhero';
+import { Superhero } from '../../interfaces/Superhero';
 
 @Injectable()
 export class SuperheroesService {
