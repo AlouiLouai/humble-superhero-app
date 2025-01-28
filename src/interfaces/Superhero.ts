@@ -1,13 +1,13 @@
-import { v4 as uuidv4 } from 'uuid'; // Import the uuid function
+import { v4 as uuidv4 } from 'uuid';
 
 export class Superhero {
-  id: string; // Use string for UUIDs
+  id: string;
   name: string;
   superpower: string;
   humilityScore: number;
 
   constructor(name: string, superpower: string, humilityScore: number) {
-    this.id = uuidv4(); // Generate a unique ID on instantiation
+    this.id = uuidv4();
     this.name = name;
     this.superpower = superpower;
     this.humilityScore = humilityScore;
