@@ -54,11 +54,12 @@ The application uses NestJS's built-in logger for better development visibility.
 
 ## API Endpoints
 
-Or if you want you can JUST :
-bash ```
-http://localhost:5000/api/docs 
+```bash 
+  http://localhost:5000/api/docs 
 ```
-For <b>SWAGGER DOCUMENTATION</b>
+Consult the Swagger documentation UI
+
+OR 
 
 ### POST /superheroes
 
