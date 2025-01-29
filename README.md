@@ -79,14 +79,46 @@ The application uses NestJS's built-in logger for better development visibility.
 ```bash
   [
     {
+      "id": "e2c608b2-137c-41e8-9c62-0160287700ed",
       "name": "Super Humble",
       "superpower": "Flying",
       "humilityScore": 9
     },
     {
+      "id": "40235d63-12ea-4365-8315-66f44a590a7e",
       "name": "Mighty Humble",
       "superpower": "Strength",
       "humilityScore": 8
     }
   ]
 ```
+
+## TEAM PLAYER ATTITUDE 
+
+1. Regular code reviews to maintain high-quality standars and ESPECIALLY learn from each other's insights making FAST GROWTH for the team.
+
+2. Engage pair programming when tackling complex features like Apach Kafka pub/sub or WebSocket with BullMQ and real-time update
+
+3. Set up CD to complete the CI/CD automating integration and deployement to for example AWS
+
+4. Make short sessions to discuss best practices for NestJS, Fastify and Redis
+
+## IF I HAD MORE TIME 
+
+1. Database Persistence
+  - Replace the in-memory array with writing to Disk using for example PostgresSQL that scale vertically adding more ressources ( GPU, RAM, etc)
+
+2. Authentication & Authorization
+  - Integrate AWS Cognito to add user authentication and role-based access control.
+
+3. Real-time Updates
+  - Use WebSockets with Socket.IO to push real-time superhero updates to a React frontend.
+
+4. Monitoring & Logging
+  - Integrate Datadog or Prometheus for better observability and debugging.
+
+5. Performance Optimization
+  - Use Redis for caching frequently accessed superhero data.
+
+6. Docker & Kubernetes Deployment
+  - Containerize the application using Docker and deploy it on Kubernetes with a Helm chart.
