@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Humble Superhero API UI
+
+This project is a modern React UI for the Humble Superhero API, built with Next.js 15 using the App Router. It allows users to view and add superheroes with their respective superpowers and humility scores.
+
+## Features
+
+- View a list of superheroes, sorted by humility score
+- Add new superheroes with name, superpower, and humility score
+- Responsive design for mobile and desktop
+- Real-time updates when adding new superheroes
+- Loading indicator while fetching data
+
+## Technologies Used
+
+- Next.js 15 (App Router)
+- React 19
+- TypeScript
+- Tailwind CSS
+- Fetch API for data fetching
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+- Node.js (v18 or later recommended)
+- npm or yarn
 
 ## Getting Started
 
-First, run the development server:
+2. Install dependencies:
+   \`\`\`
+   npm install
+   # or
+   yarn install
+   \`\`\`
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+3. Create a \`.env.local\` file in the root directory and add your API URL:
+   \`\`\`
+   NEXT_PUBLIC_API_URL=http://localhost:3000
+   \`\`\`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Run the development server:
+   \`\`\`
+   npm run dev
+   # or
+   yarn dev
+   \`\`\`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+- \`src/\`: Contains the main application code
+    - \`app/\`: Contains the main application code
+        - \`layout/\`: Contains the common layout
+        - \`page.tsx/\`: The main page component
+    - \`components/superhero/\`: Superhero React components
+        - \`SuperheroForm.tsx\`: Form for adding new superheroes
+        - \`SuperheroList.tsx\`: List of superhero cards
+        - \`SuperheroCard.tsx\`: Individual superhero card component
+    - \`hooks/\`: Contains the custom hook useSuperHero
+    - \`interfaces/\`: Contains the interfaces needs in out client
+    - \`services/\`: Contains the web services consumed
+  
 
-To learn more about Next.js, take a look at the following resources:
+## API Integration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This UI is designed to work with a NestJS backend API. Ensure your API is running and accessible at the URL specified in your \`.env.local\` file. The API should support the following endpoints:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- GET /superheroes: Fetch all superheroes
+- POST /superheroes: Add a new superhero
 
-## Deploy on Vercel
+## Customization
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+You can customize the UI by modifying the Tailwind CSS classes in the component files. The project uses Tailwind's default configuration, which can be extended in the \`tailwind.config.js\` file.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+
+This project can be easily deployed on Vercel, which is optimized for Next.js applications. Simply connect your GitHub repository to Vercel and it will automatically deploy your application.
+
+For other deployment options, refer to the [Next.js deployment documentation](https://nextjs.org/docs/deployment).
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+
