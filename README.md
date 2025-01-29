@@ -54,6 +54,13 @@ The application uses NestJS's built-in logger for better development visibility.
 
 ## API Endpoints
 
+```bash 
+  http://localhost:5000/api/docs 
+```
+Consult the Swagger documentation UI
+
+OR 
+
 ### POST /superheroes
 
   - Adds a new superhero to the in-memory array.
@@ -122,3 +129,9 @@ The application uses NestJS's built-in logger for better development visibility.
 
 6. Docker & Kubernetes Deployment
   - Containerize the application using Docker and deploy it on Kubernetes with a Helm chart.
+
+7. Frontend Improvement
+  - Use the chadcn reusable UI component for Input, Card, List, Button, Dialog for better UX
+  - Use the Clerk user management API that have all logic for UI and routing and features for auth
+  - Maybe convert the UI to be in the left the form of adding superhero and right the list of all superheroes ( Need to figure out the display of card within the left box)
+  - load more instead of pagination + implement pagination logic from the backend Nestjs
