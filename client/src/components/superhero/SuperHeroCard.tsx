@@ -1,10 +1,11 @@
-import { Superhero } from '@/types/Superhero';
+import React from 'react';
+import { Superhero } from '@/interfaces/Superhero';
 
 interface SuperheroCardProps {
   superhero: Superhero;
 }
 
-export default function SuperheroCard({ superhero }: SuperheroCardProps) {
+export function SuperheroCard({ superhero }: SuperheroCardProps) {
   return (
     <div className="bg-white shadow-lg rounded-lg overflow-hidden">
       <div className="px-6 py-4">

@@ -1,9 +1,10 @@
 'use client';
 import { useSuperhero } from '@/hooks/useSuperhero';
-import SuperheroForm from './SuperHeroForm';
-import SuperheroList from './SuperHeroList';
+import { SuperheroForm } from './SuperHeroForm';
+import { SuperheroList } from './SuperHeroList';
+import React from 'react';
 
-export default function SuperHeroMain() {
+export function SuperHeroMain() {
   const { superheroes, loading, error, successMessage, addSuperhero } =
     useSuperhero();
 

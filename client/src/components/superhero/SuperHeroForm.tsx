@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 interface SuperheroFormProps {
   onAddSuperhero: (superhero: {
@@ -9,17 +9,31 @@ interface SuperheroFormProps {
   }) => void;
 }
 
-export default function SuperheroForm({ onAddSuperhero }: SuperheroFormProps) {
+export function SuperheroForm({ onAddSuperhero }: SuperheroFormProps) {
   const [name, setName] = useState('');
   const [superpower, setSuperpower] = useState('');
-  const [humilityScore, setHumilityScore] = useState(5);
+  const [humilityScore, setHumilityScore] = useState<number | null>(5);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    onAddSuperhero({ name, superpower, humilityScore });
+    onAddSuperhero({ name, superpower, humilityScore: humilityScore ?? 0 });
     setName('');
     setSuperpower('');
     setHumilityScore(5);
+  };
+
+  const handleHumilityScoreChange = (
+    e: React.ChangeEvent<HTMLInputElement>,
+  ) => {
+    const value = e.target.value;
+    const parsedValue = value === '' ? null : Number.parseInt(value);
+
+    // If parsedValue is NaN, do not update the state
+    if (parsedValue !== null && !isNaN(parsedValue)) {
+      setHumilityScore(parsedValue);
+    } else if (value === '') {
+      setHumilityScore(null); // Allow empty string for reset
+    }
   };
 
   return (
@@ -74,8 +88,8 @@ export default function SuperheroForm({ onAddSuperhero }: SuperheroFormProps) {
           type="number"
           min="1"
           max="10"
-          value={humilityScore}
-          onChange={(e) => setHumilityScore(Number.parseInt(e.target.value))}
+          value={humilityScore ?? ''} // Allow empty value
+          onChange={handleHumilityScoreChange}
           required
         />
       </div>

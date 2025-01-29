@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Superhero } from '@/types/Superhero';
+import { Superhero } from '@/interfaces/Superhero';
 import { SuperheroService } from '@/services/superhero.service';
 
 export function useSuperhero() {

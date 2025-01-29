@@ -9,7 +9,7 @@ async function bootstrap() {
 
   // Access the ConfigService to get the PORT value from .env
   const configService = app.get(ConfigService);
-  const port = configService.get<number>('PORT', 3000);
+  const port = configService.get<number>('PORT', 5000);
 
   // Use the Swagger UI , already have fastify/static for CSS, HTML within UI
   const config = new DocumentBuilder()
