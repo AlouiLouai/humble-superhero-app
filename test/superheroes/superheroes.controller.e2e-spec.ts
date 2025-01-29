@@ -1,7 +1,7 @@
 import * as request from 'supertest';
 import * as http from 'http';
 import { Test, TestingModule } from '@nestjs/testing';
-import { INestApplication } from '@nestjs/common';
+import { BadRequestException, INestApplication } from '@nestjs/common';
 import { SuperheroesModule } from '../../src/modules/superheroes/superheroes.module';
 import { SuperheroesService } from '../../src/modules/superheroes/superheroes.service';
 import { CreateSuperheroDto } from '../../src/modules/superheroes/interfaces/dto/CreateSuperheroDto';
@@ -66,9 +66,7 @@ describe('SuperheroesController (e2e)', () => {
     // Mock the service method to throw an error for duplicate superheroes
     jest
       .spyOn(service, 'addSuperhero')
-      .mockRejectedValue(
-        new Error('Superhero with name "Hero A" already exists.'),
-      );
+      .mockRejectedValue(new BadRequestException(errorResponse.message));
 
     // This time catch the error and expect a 400 response
     const response = await request(app.getHttpServer() as http.Server)
