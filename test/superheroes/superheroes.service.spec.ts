@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { SuperheroesService } from './superheroes.service';
+import { SuperheroesService } from '../../src/modules/superheroes/superheroes.service';
 import { BadRequestException } from '@nestjs/common';
 
 describe('SuperheroesService', () => {

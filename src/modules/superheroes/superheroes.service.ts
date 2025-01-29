@@ -4,7 +4,7 @@ import {
   Logger,
   InternalServerErrorException,
 } from '@nestjs/common';
-import { Superhero } from '../../interfaces/Superhero';
+import { Superhero } from './interfaces/Superhero';
 
 @Injectable()
 export class SuperheroesService {

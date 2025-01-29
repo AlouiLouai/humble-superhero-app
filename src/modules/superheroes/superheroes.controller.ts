@@ -8,8 +8,8 @@ import {
   ValidationPipe,
 } from '@nestjs/common';
 import { SuperheroesService } from './superheroes.service';
-import { CreateSuperheroDto } from '../../interfaces/dto/CreateSuperheroDto';
-import { Superhero } from '../../interfaces/Superhero';
+import { CreateSuperheroDto } from './interfaces/dto/CreateSuperheroDto';
+import { Superhero } from './interfaces/Superhero';
 
 @Controller('superheroes')
 export class SuperheroesController {

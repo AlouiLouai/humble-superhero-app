@@ -1,9 +1,9 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { SuperheroesController } from './superheroes.controller';
-import { SuperheroesService } from './superheroes.service';
+import { SuperheroesController } from '../../src/modules/superheroes/superheroes.controller';
+import { SuperheroesService } from '../../src/modules/superheroes/superheroes.service';
 import { BadRequestException } from '@nestjs/common';
-import { CreateSuperheroDto } from '../../interfaces/dto/CreateSuperheroDto';
-import { Superhero } from '../../interfaces/Superhero';
+import { CreateSuperheroDto } from '../../src/modules/superheroes/interfaces/dto/CreateSuperheroDto';
+import { Superhero } from '../../src/modules/superheroes/interfaces/Superhero';
 
 describe('SuperheroesController', () => {
   let controller: SuperheroesController;
