@@ -12,7 +12,10 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest] # Adding the matrix for different OS
+    runs-on: ${{ matrix.os }} # Use the current OS in the matrix
 
     steps:
       - name: 🚀 Checkout Repository
