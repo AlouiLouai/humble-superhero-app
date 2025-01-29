@@ -1,2 +1,3 @@
 # Focus on the frontend part 
-# implement CI 
+# Nextjs 15 app router for the client since the frontend is optional so I should ignore configuration for frontend 
+# Suggested UI : left radius div having form to add + right raduis div having list of all heroes 
