@@ -22,18 +22,22 @@ export class PrismaService
     this.$use(this.humilityScoreMiddleware);
   }
 
-  // Middleware function for validating humilityScore
-  private humilityScoreMiddleware: Prisma.Middleware = (params, next) => {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+  private humilityScoreMiddleware: Prisma.Middleware = async (
+    params: Prisma.MiddlewareParams,
+    next: (
+      params: Prisma.MiddlewareParams,
+    ) => Promise<Prisma.PrismaPromise<unknown>>,
+  ): Promise<Prisma.PrismaPromise<unknown>> => {
     if (params.model === 'Superhero' && params.action === 'create') {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-      const data = params.args.data as { humilityScore: number };
-      if (data.humilityScore < 1 || data.humilityScore > 10) {
-        throw new Error('humilityScore must be between 1 and 10');
+      const args = params.args as { data?: { humilityScore?: number } };
+
+      if (args.data && typeof args.data.humilityScore === 'number') {
+        if (args.data.humilityScore < 1 || args.data.humilityScore > 10) {
+          throw new Error('humilityScore must be between 1 and 10');
+        }
       }
     }
-    // Proceed with the next Prisma query
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+
     return next(params);
   };
 }
