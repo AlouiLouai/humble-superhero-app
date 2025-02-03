@@ -112,10 +112,10 @@ OR
 
 ## IF I HAD MORE TIME 
 
-1. Database Persistence
+1. (ALREADY DONE) Database Persistence
   - Replace the in-memory array with writing to Disk using for example PostgresSQL that scale vertically adding more ressources ( GPU, RAM, etc)
 
-2. Authentication & Authorization
+2. (I CANT HANDLE THIS SINCE I HAVEN'T A VALID CARD TO PAY FOR AWS ":(" ) Authentication & Authorization
   - Integrate AWS Cognito to add user authentication and role-based access control.
 
 3. Real-time Updates
