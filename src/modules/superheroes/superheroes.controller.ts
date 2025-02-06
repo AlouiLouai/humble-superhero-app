@@ -39,11 +39,8 @@ export class SuperheroesController {
       `Received request to add superhero: ${createSuperheroDto.name}`,
     );
     try {
-      const newSuperhero = await this.superheroesService.addSuperhero(
-        createSuperheroDto.name,
-        createSuperheroDto.superpower,
-        createSuperheroDto.humilityScore,
-      );
+      const newSuperhero =
+        await this.superheroesService.addSuperhero(createSuperheroDto);
 
       this.logger.log(`Successfully added superhero: ${newSuperhero.name}`);
       return newSuperhero;
