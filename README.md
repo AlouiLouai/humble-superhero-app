@@ -112,25 +112,22 @@ OR
 
 ## IF I HAD MORE TIME 
 
-1. (ALREADY DONE) Database Persistence
-  - Replace the in-memory array with writing to Disk using for example PostgresSQL that scale vertically adding more ressources ( GPU, RAM, etc)
-
-2. (I CANT HANDLE THIS SINCE I HAVEN'T A VALID CARD TO PAY FOR AWS ":(" ) Authentication & Authorization
+1. (I CANT HANDLE THIS SINCE I HAVEN'T A VALID CARD TO PAY FOR AWS ":(" ) Authentication & Authorization
   - Integrate AWS Cognito to add user authentication and role-based access control.
 
-3. Real-time Updates
+2. Real-time Updates
   - Use WebSockets with Socket.IO to push real-time superhero updates to a React frontend.
 
-4. Monitoring & Logging
+3. Monitoring & Logging
   - Integrate Datadog or Prometheus for better observability and debugging.
 
-5. Performance Optimization
+4. Performance Optimization
   - Use Redis for caching frequently accessed superhero data.
 
-6. Docker & Kubernetes Deployment
+5. Docker & Kubernetes Deployment
   - Containerize the application using Docker and deploy it on Kubernetes with a Helm chart.
 
-7. Frontend Improvement
+6. Frontend Improvement
   - Use the chadcn reusable UI component for Input, Card, List, Button, Dialog for better UX
   - Use the Clerk user management API that have all logic for UI and routing and features for auth
   - Maybe convert the UI to be in the left the form of adding superhero and right the list of all superheroes ( Need to figure out the display of card within the left box)
